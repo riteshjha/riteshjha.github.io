@@ -4,7 +4,7 @@ Personal portfolio and bio site built with pure HTML & CSS, hosted on GitHub Pag
 
 ## Live Site
 
-[https://riteshkjha.github.io/bio](https://riteshkjha.github.io/bio)
+[https://riteshjha.github.io](https://riteshjha.github.io)
 
 ## Structure
 
@@ -30,11 +30,11 @@ bio/
 
 ## Deployment
 
-This site is deployed via **GitHub Pages** from the `main` branch root folder.
+This site is deployed via **GitHub Pages** as a user site.
 
-To deploy your own copy:
+To go live at `https://riteshkjha.github.io`:
 
-1. Fork or clone this repo
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)` folder
-4. Save — the site will be live at `https://<username>.github.io/<repo>`
+1. Create a GitHub repo named exactly **`riteshjha.github.io`**
+2. Push this code to the `main` branch
+3. Go to **Settings → Pages** → set source to `main` branch, `/ (root)` folder
+4. Site will be live at `https://riteshkjha.github.io` within a minute

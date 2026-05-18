@@ -48,7 +48,7 @@
           </div>
           <div class="hero-meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a id="email-hero-meta" href="#">&#9993;</a>
+            <a id="email-hero-meta" href="#">Email</a>
           </div>
           <div class="hero-meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -483,7 +483,7 @@
             <div class="contact-link-icon" style="background:#eff6ff;">📧</div>
             <div class="contact-link-body">
               <div class="contact-link-label">Email</div>
-              <div id="email-contact-value" class="contact-link-value">&#9993;</div>
+              <div id="email-contact-value" class="contact-link-value">Send an email</div>
             </div>
             <div class="contact-link-arrow">→</div>
           </a>
@@ -515,17 +515,15 @@
 
 <script>
   (function() {
-    var u = 'mailrkj', d = 'gmail', t = 'com';
-    var addr = u + '\x40' + d + '\x2E' + t;
-    var href = 'mailto:' + addr;
-    ['email-hero-btn','email-contact-btn','email-contact-link'].forEach(function(id) {
+    function openMail(e) {
+      e.preventDefault();
+      var u = 'mailrkj', d = 'gmail', t = 'com';
+      window.location.href = 'mailto:' + u + '\x40' + d + '\x2E' + t;
+    }
+    ['email-hero-meta','email-hero-btn','email-contact-btn','email-contact-link'].forEach(function(id) {
       var el = document.getElementById(id);
-      if (el) el.href = href;
+      if (el) el.addEventListener('click', openMail);
     });
-    var meta = document.getElementById('email-hero-meta');
-    if (meta) { meta.href = href; meta.textContent = addr; }
-    var val = document.getElementById('email-contact-value');
-    if (val) val.textContent = addr;
   })();
 </script>
 </body>
